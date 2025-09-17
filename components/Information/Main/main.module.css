@@ -40,12 +40,12 @@
         font-size: 16px;
     }
     .zagolovok__block{
-        font-size: 25px;
+        font-size: 18px;
     }
 
     .block__text{
-        max-width: 160px;
-        font-size: 10px;
+        max-width: 200px;
+        font-size: 14px;
     }
 }
 
