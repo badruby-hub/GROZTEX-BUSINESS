@@ -178,7 +178,77 @@
 }
 
 
+@media(max-width:450px){
+       .container__course {
+        gap: .8rem;
+    }
 
+    .dollar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+        font-size: 30px;
+    }
+
+    .first__paragraph{
+        font-size: 15px;
+    }
+    .second__paragraph{
+        font-size: 13px;
+    }
+
+}
+
+@media(min-width:451px) and (max-width:650px) {
+        .container__course {
+        gap: 1.8rem;
+    }
+
+    .dollar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+        font-size: 30px;
+    }
+
+    .first__paragraph{
+        font-size: 15px;
+    }
+    .second__paragraph{
+        font-size: 13px;
+    }
+
+}
+
+@media(min-width:651px) and (max-width:750px) {
+        .container__course {
+        gap: 4rem;
+    }
+
+    .dollar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+        font-size: 30px;
+    }
+
+    .first__paragraph{
+        font-size: 15px;
+    }
+    .second__paragraph{
+        font-size: 13px;
+    }
+
+}
 
 
 @media(max-width: 950px) {
@@ -212,7 +282,7 @@
 
     .block__info__text {
         width: 90vw;
-        height: 65vh;
+        height: 50vh;
 
     }
 
@@ -222,32 +292,12 @@
 
     .text__block__info {
         width: 80vw;
-        font-size: 1.4rem;
+        font-size: 3vh;
     }
 
     .block__btn {
-        margin-block: 5rem;
-    }
-
-    .container__course {
-        gap: .8rem;
-    }
-
-    .dollar {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 50px;
-        height: 50px;
-        padding: 13px;
-        font-size: 30px;
-    }
-
-    .first__paragraph{
-        font-size: 15px;
-    }
-    .second__paragraph{
-        font-size: 13px;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
     }
 
     .h1{
@@ -257,5 +307,4 @@
         font-size: 15px;
     }
 }
-
 
