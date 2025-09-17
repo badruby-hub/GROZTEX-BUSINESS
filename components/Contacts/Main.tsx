@@ -11,7 +11,7 @@ export default function Main() {
                 <p>
                     Ваш надежный партнер
                     для финансовых операций — GROZTEX предлагает безопасный
-                    и быстрый обмен криптовалют с минимальными комиссиями.
+                    и быстрый обмен криптовалют с нулевыми комиссиями.
                 </p>
             </div>
         </section>
@@ -30,7 +30,7 @@ export default function Main() {
             </div>
             <div className={classes.block__address}>
                <div className={`${classes.chat__support}`}>
-                 <p className={classes.address__text}>Республика Чечня, Малгобековская улица, 19</p>
+                 <p className={classes.address__text}>Республика Чечня, Малгобекская улица, 19</p>
                  <div className={classes.btn__exchange}>
                     <Link className={`${classes.link} ${classes.btn__for__exchange__two}`} href="https://t.me/GROZTEX_bot">Обменять</Link>
                  </div>
