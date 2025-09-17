@@ -8,7 +8,7 @@
 
 .circle__1 {
     animation-name: float1;
-    animation-duration: 10s;
+    animation-duration: 5s;
 }
 
 @keyframes float1 {
@@ -36,7 +36,7 @@
 
 .circle__2 {
     animation-name: float2;
-    animation-duration: 10s;
+    animation-duration: 5s;
 }
 
 
@@ -66,7 +66,7 @@
 
 .circle__3 {
     animation-name: float3;
-    animation-duration: 10s;
+    animation-duration: 5s;
 }
 
 
@@ -98,7 +98,7 @@
 
 .circle__4 {
     animation-name: float4;
-    animation-duration: 10s;
+    animation-duration: 5s;
 }
 
 
