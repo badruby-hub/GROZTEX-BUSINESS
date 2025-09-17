@@ -113,6 +113,15 @@
     margin-block: 50px;
 }
 
+.btn__for__exchange__two {
+    background-color: #12b8aa;
+    padding: 10px 25px;
+    margin-left: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    animation: shadow 1s ease infinite;
+    user-select: none;
+}
 
 .block__link {
     display: flex;
@@ -127,6 +136,17 @@
     margin-left: 40px;
     gap: 25px;
 }
+
+@keyframes shadow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(28, 125, 117, 0.8);
+    }
+
+    100% {
+        box-shadow: 0 0 0 15px rgba(28, 125, 117, 0);
+    }
+}
+
 
 @media(max-width: 850px) {
 

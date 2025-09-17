@@ -1,8 +1,26 @@
+"use client";
 import Link from "next/link"
 import classes from "./main.module.css"
+import { useEffect, useState } from "react";
 
 export default function Main() {
- 
+    const [buy, setBuy] = useState <string | null>(null);
+    const [sell, setSell] = useState <string | null> (null);
+    useEffect(() => {
+    const fetchWell = async ()=>{
+          try {
+            const res = await fetch("/api/well-rate");
+            const data = await res.json();
+            const apiBuy = parseFloat(data?.sell);
+            const apiSell = parseFloat(data?.buy);
+            setBuy((apiBuy + 0.4).toFixed(2));
+            setSell((apiSell + 0.4).toFixed(2));
+          } catch (error) {
+            console.error(error)
+          }
+    };
+    fetchWell();
+},[]);
     return(
     <main className={classes.main}>
         <section  className={classes.container__one}>
@@ -23,22 +41,22 @@ export default function Main() {
             <p className={`${classes.second__paragraph} ${classes.usdt__paragraph}`}>USDT</p>
             </div>
         </li>
-        <li className={classes.course}>
+        {/* <li className={classes.course}>
             <p className={classes.first__paragraph}>Change</p>
             <p className={classes.second__paragraph}>+14.04%</p>
+        </li> */}
+        <li className={classes.course}>
+            <p className={classes.first__paragraph}>Покупка</p>
+            <p className={classes.second__paragraph}>{buy}</p>
         </li>
         <li className={classes.course}>
-            <p className={classes.first__paragraph}>Buy</p>
-            <p className={classes.second__paragraph}>82.43</p>
+            <p className={classes.first__paragraph}>Продажа</p>
+            <p className={classes.second__paragraph}>{sell}</p>
         </li>
-        <li className={classes.course}>
-            <p className={classes.first__paragraph}>Sell</p>
-            <p className={classes.second__paragraph}>73.62</p>
-        </li>
-        <li className={classes.course}>
-            <p className={classes.first__paragraph}>Chart</p>
-            <p className={classes.second__paragraph}>/|\\/</p>
-        </li>
+        {/* <li className={classes.course}>
+            <p className={classes.first__paragraph}>Диаграмма</p>
+            <p className={classes.second__paragraph}></p>
+        </li> */}
      </ul>
      </section>
      <section className={classes.container__two}>
