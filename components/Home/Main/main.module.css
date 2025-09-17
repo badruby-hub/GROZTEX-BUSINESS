@@ -179,3 +179,83 @@
 
 
 
+
+
+@media(max-width: 950px) {
+    .card {
+        width: 25vw;
+        height: 25vh;
+        padding: 12px;
+    }
+
+    .block__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.7vw;
+        height: .7vh;
+    }
+
+    .block__img img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .zagolovok__card {
+        font-size: 1.5rem;
+
+    }
+
+    .text__card {
+        font-size: 10px;
+    }
+
+    .block__info__text {
+        width: 90vw;
+        height: 65vh;
+
+    }
+
+    .zagolovok__groztex {
+        font-size: 2.5rem;
+    }
+
+    .text__block__info {
+        width: 80vw;
+        font-size: 1.4rem;
+    }
+
+    .block__btn {
+        margin-block: 5rem;
+    }
+
+    .container__course {
+        gap: .8rem;
+    }
+
+    .dollar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+        font-size: 30px;
+    }
+
+    .first__paragraph{
+        font-size: 15px;
+    }
+    .second__paragraph{
+        font-size: 13px;
+    }
+
+    .h1{
+        font-size: 20px;
+    }
+    .h3{
+        font-size: 15px;
+    }
+}
+
+

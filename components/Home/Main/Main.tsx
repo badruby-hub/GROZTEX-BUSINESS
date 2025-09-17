@@ -17,7 +17,7 @@ export default function Main() {
             </div>
      <ul className={classes.container__course}>
         <li className={`${classes.course} ${classes.block__dollar__trc}`}>
-            <p className={`${classes.first__paragraph} ${classes.dollar}`}>$</p>
+            <p className={` ${classes.dollar}`}>$</p>
             <div>
             <p className={`${classes.first__paragraph} ${classes.trc__paragraph}`}>TRC 20</p>
             <p className={`${classes.second__paragraph} ${classes.usdt__paragraph}`}>USDT</p>
