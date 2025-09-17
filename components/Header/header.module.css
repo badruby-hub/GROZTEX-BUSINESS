@@ -1,0 +1,75 @@
+.header {
+    background-color:black;
+    height: 70px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin-inline: 10vw;
+    font-weight: 600;
+}
+
+.ul {
+    list-style-type: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.logo__name {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+}
+
+.tether {
+    width: 60px;
+}
+
+.shadow {
+    background-color: rgb(28, 125, 117);
+    position: absolute;
+}
+
+.btn__for__exchange {
+    background-color: rgb(28, 125, 117);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    animation: shadow 1s ease infinite;
+    user-select: none;
+}
+
+
+@keyframes shadow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(28, 125, 117, 0.8);
+    }
+
+    100% {
+        box-shadow: 0 0 0 15px rgba(28, 125, 117, 0);
+    }
+}
+
+
+
+@media(max-width: 850px){
+    .ul{
+        display: none;
+    }
+    .block__btn{
+        display: none;
+    }
+}

@@ -1,0 +1,125 @@
+.circle {
+    position: absolute;
+    -webkit-box-shadow: 0px 0px 140px 150px rgba(37, 134, 106, 0.4);
+    -moz-box-shadow: 0px 0px 140px 150px rgba(37, 134, 106, 0.4);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.circle__1 {
+    animation-name: float1;
+    animation-duration: 10s;
+}
+
+@keyframes float1 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(-10px, 20px);
+    }
+
+    50% {
+        transform: translate(-15px, 10px);
+    }
+
+    75% {
+        transform: translate(20px, 15px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+.circle__2 {
+    animation-name: float2;
+    animation-duration: 10s;
+}
+
+
+@keyframes float2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(10px, -20px);
+    }
+
+    50% {
+        transform: translate(15px, 10px);
+    }
+
+    75% {
+        transform: translate(-20px, -15px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+
+.circle__3 {
+    animation-name: float3;
+    animation-duration: 10s;
+}
+
+
+@keyframes float3 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(-20px, 10px);
+    }
+
+    50% {
+        transform: translate(15px, -15px);
+    }
+
+    75% {
+        transform: translate(-10px, 20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+
+
+
+.circle__4 {
+    animation-name: float4;
+    animation-duration: 10s;
+}
+
+
+@keyframes float4 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(20px, -10px);
+    }
+
+    50% {
+        transform: translate(-15px, 15px);
+    }
+
+    75% {
+        transform: translate(10px, -20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
