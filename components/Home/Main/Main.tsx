@@ -13,7 +13,7 @@ export default function Main() {
             const data = await res.json();
             const apiBuy = parseFloat(data?.sell);
             const apiSell = parseFloat(data?.buy);
-            setBuy((apiBuy).toFixed(2));
+            setBuy((apiBuy + 0.4).toFixed(2));
             setSell((apiSell).toFixed(2));
           } catch (error) {
             console.error(error)
