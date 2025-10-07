@@ -66,20 +66,29 @@ export default function Main() {
            <article className={`${classes.card__exchange} ${classes.card}`}>
                <div className={classes.block__img}><img src="Vector.png" alt="" /></div>
                <h4 className={`${classes.zagolovok__card}`}>Обмен</h4>
-               <p className={classes.text__card}>Мгновенный обмен</p>
-               <p className={classes.text__card}>Мы работаем 24/7</p>
+               <div className={classes.block__text__card}>
+   <p className={classes.text__card}>Мгновенный обмен</p>
+               <p className={classes.text__card}>Работаем с 10:00 до 00:00 по МСК</p>
+               </div>
+            
            </article>
            <article className={`${classes.card__transactions} ${classes.card}`}>
              <div className={classes.block__img}><img src="transaction.png" alt="" /></div>
                      <h4 className={`${classes.zagolovok__card}`}>Сделки</h4>
-                     <p className={classes.text__card}>2500+ сделок в день</p>
+                     <div className={classes.block__text__card}>
+<p className={classes.text__card}>2500+ сделок в день</p>
                      <p className={classes.text__card}>Обмен USDT без комиссии</p>
+                     </div>
+                     
            </article>
            <article className={`${classes.card__market} ${classes.card}`}>
              <div className={classes.block__img}><img src="wallet.png" alt="" /></div>
                      <h4 className={`${classes.zagolovok__card}`}>Рынок</h4>
-                     <p className={classes.text__card}>Лучший курс на рынке</p>
+                     <div className={classes.block__text__card}>
+ <p className={classes.text__card}>Лучший курс на рынке</p>
                      <p className={classes.text__card}>Самый низкий курс на покупку USDT</p>
+                     </div>
+                    
            </article>
     </article>
     <article className={classes.block__info__text}>

@@ -132,6 +132,7 @@
 
 
 .text__card {
+    margin-block: 10px;
     font-size: 15px;
 }
 
@@ -166,6 +167,10 @@
     user-select: none;
 }
 
+
+.block__text__card{
+    text-align: center;
+}
 
 
 @keyframes shadow {
