@@ -112,7 +112,8 @@
     justify-content: center;
     align-items: center;
     width: 90px;
-    height: 150px;
+    height: 25vh;
+    max-height: 170px;
     display: flex;
 }
 
@@ -159,7 +160,7 @@
     background-color: #1c8f85;
     border-radius: 15px 0 0 15px;
     width: 50%;
-    height: 290px;
+    height: 330px;
     padding: 10px;
 }
 
@@ -172,7 +173,7 @@
     padding: 10px;
     padding-right: 20px;
     width: 50%;
-    height: 290px;
+    height: 330px;
     z-index: 10;
 
 }
@@ -186,6 +187,7 @@
     /* text-align: justify; */
     color: rgba(219, 217, 217, .553);
     width: 100px;
+    height: 150px;
     margin-left: 10px;
     font-size: 11px;
 }
