@@ -21,6 +21,7 @@ export default function Footer() {
              <article className={classes.block__info__three}>
             <h3>Contact</h3>
             <p className={`${classes.btn} ${classes.chat__news}`}><Link className={`${classes.link} ${classes.btn__groztex__news}`} href="https://t.me/groztex_news">Новостной канал</Link></p>
+            <p className={`${classes.btn} ${classes.chat__news}`}><Link className={`${classes.link} ${classes.btn__groztex__news}`} href="https://chat.whatsapp.com/I0PLZZCBFaG2ytel0YtwMs">Группа в WhatsApp</Link></p>
             <p className={`${classes.btn} ${classes.chat__bot}`}><Link className={`${classes.link} ${classes.btn__groztex__bot}`} href="https://t.me/GROZTEX_bot">@GROZTEX_bot</Link></p>
             <p className={`${classes.btn} ${classes.chat__support}`}><Link className={`${classes.link} ${classes.btn__groztex__support}`} href="https://t.me/GROZTEX">@GROZTEX_Support</Link></p>
             <p className={`${classes.btn} ${classes.chat__email}`}><Link className={`${classes.link} ${classes.btn__groztex__info}`} href="mailto:groztex@yandex.ru?subject=Запрос%20с%20сайта&body=Здравствуйте">groztex@yandex.ru</Link></p>

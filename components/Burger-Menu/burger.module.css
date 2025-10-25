@@ -101,8 +101,8 @@
 
 .ul {
     display: flex;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 15px;
+    margin-bottom: 0px;
     list-style-type: none;
     flex-direction: column;
     align-items: center;

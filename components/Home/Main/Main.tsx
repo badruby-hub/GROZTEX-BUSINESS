@@ -90,7 +90,7 @@ export default function Main() {
             </div>
             <h4 className={`${classes.zagolovok__card}`}>Сделки</h4>
             <div className={classes.block__text__card}>
-              <p className={classes.text__card}>2500+ сделок в день</p>
+              <p className={classes.text__card}>500+ сделок в день</p>
               <p className={classes.text__card}>Обмен USDT без комиссии</p>
             </div>
           </article>
