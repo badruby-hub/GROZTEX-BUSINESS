@@ -125,7 +125,7 @@ export default function Main() {
               </Link>
             </div>
           </article>
-          <div className={classes.line__block}></div> {/* линия между блоков */}
+          {/* <div className={classes.line__block}></div> линия между блоков 
           <article className={classes.block__info__text__news}>
             <h2 className={classes.zagolovok__groztex}>НОВОСТИ</h2>
             <div>
@@ -141,7 +141,7 @@ export default function Main() {
                 Подписаться
               </Link>
             </div>
-          </article>
+          </article> */}
         </article>
       </section>
     </main>
