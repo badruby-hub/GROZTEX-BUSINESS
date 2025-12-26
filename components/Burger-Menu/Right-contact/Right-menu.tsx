@@ -22,7 +22,7 @@ export default function RightMenu() {
          </ul>
         <ul className={`${classes.ul} ${active ? classes.visible : classes.hidden}`}>
           <li>
-            <a href="https://t.me/groztex_news">
+            <a href="https://t.me/groztex_news_groz">
    <div className={classes.block__img}>
               <img src="/telegram-icon/icon-tg-96.png" alt="icon-telegram" />
             </div>
