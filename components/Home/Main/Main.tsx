@@ -2,25 +2,26 @@
 import Link from "next/link";
 import classes from "./main.module.css";
 import { useEffect, useState } from "react";
+import Loader from "@/components/Loader/Loader";
 
 export default function Main() {
-  const [buy, setBuy] = useState<string | null>(null);
-  const [sell, setSell] = useState<string | null>(null);
-  useEffect(() => {
-    const fetchWell = async () => {
-      try {
-        const res = await fetch("/api/well-rate");
-        const data = await res.json();
-        const apiBuy = parseFloat(data?.sell);
-        const apiSell = parseFloat(data?.buy);
-        setBuy((apiBuy + 0.4).toFixed(2));
-        setSell(apiSell.toFixed(2));
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchWell();
-  }, []);
+  // const [buy, setBuy] = useState<string | null>(null);
+  // const [sell, setSell] = useState<string | null>(null);
+  // useEffect(() => {
+  //   const fetchWell = async () => {
+  //     try {
+  //       const res = await fetch("/api/well-rate");
+  //       const data = await res.json();
+  //       const apiBuy = parseFloat(data?.sell);
+  //       const apiSell = parseFloat(data?.buy);
+  //       setBuy((apiBuy + 0.4).toFixed(2));
+  //       setSell(apiSell.toFixed(2));
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
+  //   fetchWell();
+  // }, []);
   return (
     <main className={classes.main}>
       <section className={classes.container__one}>
@@ -56,11 +57,11 @@ export default function Main() {
         </li> */}
           <li className={classes.course}>
             <p className={classes.first__paragraph}>Покупка</p>
-            <p className={classes.second__paragraph}>{buy}</p>
+            <p className={classes.second__paragraph}><Loader/></p>
           </li>
           <li className={classes.course}>
             <p className={classes.first__paragraph}>Продажа</p>
-            <p className={classes.second__paragraph}>{sell}</p>
+            <p className={classes.second__paragraph}><Loader/></p>
           </li>
           {/* <li className={classes.course}>
             <p className={classes.first__paragraph}>Диаграмма</p>
