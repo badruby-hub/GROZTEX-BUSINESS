@@ -3,8 +3,12 @@ import Link from "next/link";
 import classes from "./main.module.css";
 import { useEffect, useState } from "react";
 import Loader from "@/components/Loader/Loader";
+import useReveal from "@/app/utils/useReveal";
+
+const d = (ms: number) => ({ "--delay": `${ms}ms` } as React.CSSProperties);
 
 export default function Main() {
+  useReveal();
   // const [buy, setBuy] = useState<string | null>(null);
   // const [sell, setSell] = useState<string | null>(null);
   // useEffect(() => {
@@ -25,9 +29,9 @@ export default function Main() {
   return (
     <main className={classes.main}>
       <section className={classes.container__one}>
-        <h1 className={classes.h1}>GROZTEX ускорит ваш бизнес</h1>
-        <h3 className={classes.h3}>Лучший обменник</h3>
-        <div className={classes.block__btn}>
+        <h1 className={classes.h1} data-reveal>GROZTEX ускорит ваш бизнес</h1>
+        <h3 className={classes.h3} data-reveal style={d(100)}>Лучший обменник</h3>
+        <div className={classes.block__btn} data-reveal="zoom" style={d(200)}>
           <Link
             className={`${classes.link} ${classes.btn__for__exchange__one}`}
             href="https://t.me/GROZTEX_bot"
@@ -35,7 +39,7 @@ export default function Main() {
             Купить / Продать USDT
           </Link>
         </div>
-        <ul className={classes.container__course}>
+        <ul className={classes.container__course} data-reveal style={d(300)}>
           <li className={`${classes.course} ${classes.block__dollar__trc}`}>
             <p className={` ${classes.dollar}`}>$</p>
             <div>
@@ -70,10 +74,10 @@ export default function Main() {
         </ul>
       </section>
       <section className={classes.container__two}>
-        <h1 className={classes.h1__two}>Почему GROZTEX ?</h1>
+        <h1 className={classes.h1__two} data-reveal>Почему GROZTEX ?</h1>
 
         <article className={classes.block__card}>
-          <article className={`${classes.card__exchange} ${classes.card}`}>
+          <article className={`${classes.card__exchange} ${classes.card}`} data-reveal style={d(0)}>
             <div className={classes.block__img}>
               <img src="Vector.png" alt="" />
             </div>
@@ -85,7 +89,7 @@ export default function Main() {
               </p>
             </div>
           </article>
-          <article className={`${classes.card__transactions} ${classes.card}`}>
+          <article className={`${classes.card__transactions} ${classes.card}`} data-reveal style={d(120)}>
             <div className={classes.block__img}>
               <img src="transaction.png" alt="" />
             </div>
@@ -95,7 +99,7 @@ export default function Main() {
               <p className={classes.text__card}>Обмен USDT без комиссии</p>
             </div>
           </article>
-          <article className={`${classes.card__market} ${classes.card}`}>
+          <article className={`${classes.card__market} ${classes.card}`} data-reveal style={d(240)}>
             <div className={classes.block__img}>
               <img src="wallet.png" alt="" />
             </div>
@@ -109,7 +113,7 @@ export default function Main() {
           </article>
         </article>
         <article className={classes.container_info_bot_and_news}>
-          <article className={classes.block__info__text}>
+          <article className={classes.block__info__text} data-reveal="zoom">
             <h2 className={classes.zagolovok__groztex}>GROZTEX</h2>
             <div>
               <p className={classes.text__block__info}>

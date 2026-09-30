@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import BurgerMenu from "../Burger-Menu/Burger-btn";
 import  classes  from "./header.module.css";
 import Link from "next/link"
@@ -7,25 +8,44 @@ import MenuList from "../Burger-Menu/Burger-list";
 
 
 export default function Header() {
-        const [active, setActive] = useState(false);
+    const [active, setActive] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const pathname = usePathname();
 
-        useEffect(() => {
+    useEffect(() => {
+        // На широком экране бургер не нужен — закрываем меню
         const handleResize = () => {
-              if (window.innerWidth > 850) {
-                    setActive(false);
+            if (window.innerWidth > 850) {
+                setActive(false);
             }
-  };
+        };
+        // Когда страницу прокрутили — у шапки появляется тень
+        const handleScroll = () => setScrolled(window.scrollY > 10);
 
-  window.addEventListener("resize", handleResize);
+        window.addEventListener("resize", handleResize);
+        window.addEventListener("scroll", handleScroll, { passive: true });
 
-  // Вызываем сразу при монтировании, чтобы скрыть бургер если нужно
-  handleResize();
+        // Вызываем сразу при монтировании, чтобы скрыть бургер если нужно
+        handleResize();
+        handleScroll();
 
-  return () => {
-    window.removeEventListener("resize", handleResize);
-  };
-}, []);
-    return<header className={classes.header}>
+        return () => {
+            window.removeEventListener("resize", handleResize);
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    // Пока открыто бургер-меню — страница под ним не скроллится
+    useEffect(() => {
+        document.body.style.overflow = active ? "hidden" : "";
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [active]);
+
+    const isActive = (href: string) => (pathname === href ? classes.link__active : "");
+
+    return<header className={`${classes.header} ${scrolled ? classes.header__scrolled : ""}`}>
        <nav className={classes.nav}>
         <div className={classes.block__logo}><Link className={`${classes.link} ${classes.logo}`} href="/">
             <div className={classes.logo__name}>GROZ
@@ -37,11 +57,11 @@ export default function Header() {
              </svg>EX</div>
             </Link></div>
         <ul className={classes.ul}>
-            <li className={classes.li}><Link className={`${classes.link} ${classes.info}`} href="/information">Информация</Link></li>
-            <li className={classes.li}><Link className={`${classes.link} ${classes.docs}`} href="/contacts">Контакты</Link></li>
+            <li className={classes.li}><Link className={`${classes.link} ${classes.nav__link} ${isActive("/information")}`} href="/information">Информация</Link></li>
+            <li className={classes.li}><Link className={`${classes.link} ${classes.nav__link} ${isActive("/contacts")}`} href="/contacts">Контакты</Link></li>
         </ul>
         <div className={classes.block__btn}><Link className={`${classes.link} ${classes.btn__for__exchange}`} href="https://t.me/GROZTEX_bot">Обменять</Link></div>
-         {!active && <BurgerMenu active={active} setActive={setActive}/>}
+          <BurgerMenu active={active} setActive={setActive}/>
           <MenuList active={active} setActive={setActive}/>
       </nav>
     </header>
